@@ -77,19 +77,19 @@
         
         
 
-                        <form class="form-horizontal" novalidate ng-controller="StudentFormController as studentFormCtrl"
-                                                      ng-submit = "studentFormCtrl.addStudent(firstName, lastName, email, contactNumber, country, highSchool, gpa, specialization, sop, lor)">
+                        <form class="form-horizontal" novalidate ng-controller="VendorFormController as vendorFormCtrl"
+                                                      ng-submit = "vendorFormCtrl.addVendor(vendorOrganization, contactPerson, email, appName, appDetails, functionalTesting, payAsYouGo, IpayAsYouGo)">
                             <div class="form-group">
                             <label for="inputEmail3" class="col-sm-2 control-label">Vendor Organization</label>
                             <div class="col-sm-10">
 
-                              <input type="text" required ng-model="firstName" class="form-control" id="inputFirstName" placeholder="Vendor Organization">
+                              <input type="text" required ng-model="vendorOrganization" class="form-control" id="inputFirstName" placeholder="Vendor Organization">
                             </div>
                           </div>
                           <div class="form-group">
                             <label for="inputEmail3" class="col-sm-2 control-label">Name of Contact Person</label>
                             <div class="col-sm-10">
-                              <input type="text" class="form-control" ng-model="lastName" id="inputLastName" placeholder="Name of Contact Person">
+                              <input type="text" class="form-control" ng-model="contactPerson" id="inputLastName" placeholder="Name of Contact Person">
                             </div>
                           </div>
                           <div class="form-group">
@@ -102,19 +102,19 @@
                           <div class="form-group">
                             <label for="inputPassword3" class="col-sm-2 control-label">Application Name</label>
                             <div class="col-sm-10">
-                              <input type="text" class="form-control" id="inputCountry" ng-model="country" placeholder="Application Name">
+                              <input type="text" class="form-control" id="inputCountry" ng-model="appName" placeholder="Application Name">
                             </div>
                           </div>
                            <div class="form-group">
                             <label for="inputPassword3" class="col-sm-2 control-label">Application Details</label>
                             <div class="col-sm-10">
-                              <input type="text" class="form-control" id="inputCountry" ng-model="country" placeholder="Application Details">
+                              <input type="text" class="form-control" id="appDetails" ng-model="country" placeholder="Application Details">
                             </div>
                           </div>
                           <div class="form-group">
                             <label for="inputPassword3" class="col-sm-2 control-label">Testing Requirements</label>
                             <div class="col-sm-10">
-                              <label class="checkbox-inline"><input type="checkbox" value="">Functional Testing</label>
+                              <label class="checkbox-inline"><input type="checkbox" value="" ng-model="functionalTesting">Functional Testing</label>
                               <label class="checkbox-inline"><input type="checkbox" value="">Localization Testing</label>
                               <label class="checkbox-inline"><input type="checkbox" value="">Load Testing</label>
                               <label class="checkbox-inline"><input type="checkbox" value="">Security Testing</label>
@@ -125,7 +125,7 @@
                           <div class="form-group">
                             <label for="inputPassword3" class="col-sm-2 control-label">Payment Type</label>
                             <div class="col-sm-10">                    
-                              <label class="radio-inline"><input type="radio" name="optradio">Pay-As-You-Go</label>
+                              <label class="radio-inline"><input type="radio" name="optradio" ng-model = "payAsYouGo">Pay-As-You-Go</label>
                               <label class="radio-inline"><input type="radio" name="optradio">Monthly</label>
                               <label class="radio-inline"><input type="radio" name="optradio">Annual</label>
                             </div>
@@ -133,7 +133,7 @@
                           <div class="form-group">
                             <label for="inputPassword3" class="col-sm-2 control-label">Incentive Type</label>
                             <div class="col-sm-10">
-                              <label class="radio-inline"><input type="radio" name="optradio1">Pay-As-You-Go</label>
+                              <label class="radio-inline"><input type="radio" name="optradio1" ng-model = "IpayAsYouGo">Pay-As-You-Go</label>
                               <label class="radio-inline"><input type="radio" name="optradio1">No Incentive</label>
                               <label class="radio-inline"><input type="radio" name="optradio1">Monthly</label>
                             </div>
