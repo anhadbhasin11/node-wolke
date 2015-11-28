@@ -128,12 +128,16 @@
         
         this.login = function (username, pass) {
             if (username=="ctest" && pass =="ctest" ) {
-                alert("Login Successful "+ vendorRegistration[0].contactPerson);
+               // alert("Login Successful "+ vendorRegistration[0].contactPerson);
                 window.open('CrowdTesterHome.html', '_self', false)
             } else if(username=="vtest" && pass =="vtest" ) {
                 //alert("Login Successful");
                 window.open('VendorHome.html', '_self', false)
+            } else if(username=="vtest" && pass =="vtest" ) {
+                //alert("Login Successful");
+                window.open('VendorHome.html', '_self', false)
             }
+
                 else {
                 alert("Login unsuccessful");
             }
