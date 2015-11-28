@@ -133,9 +133,9 @@
             } else if(username=="vtest" && pass =="vtest" ) {
                 //alert("Login Successful");
                 window.open('VendorHome.html', '_self', false)
-            } else if(username=="vtest" && pass =="vtest" ) {
+            } else if(username=="ptest" && pass =="ptest" ) {
                 //alert("Login Successful");
-                window.open('VendorHome.html', '_self', false)
+                window.open('PMHome.html', '_self', false)
             }
 
                 else {
