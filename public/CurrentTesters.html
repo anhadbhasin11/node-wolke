@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Crowd Tester Dashboard</title>
+    <title>Project Manager Dashboard</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -71,38 +71,108 @@
 
             <div class="page-header">
                 <br/>
-                <h1>Vendor Dashboard</h1>
+                <h1>Project Manager Dashboard</h1>
 
             </div>
         <!--<p>Visit this page often for a sample of paid projects that are open and have unique requirements. Read the listings and apply to those for which you are a match. In order to qualify for paid projects, you must be a member, please join today.</p>-->
 
         <!-- Centered Tabs -->
                     <ul class="nav nav-tabs nav-justified">
-                      <li class="active"><a href="VendorHome.html">Home</a></li>
-                      <li><a href="VendorProjects.html">Projects</a></li>
-                      <li><a href="VendorProjects.html ">Billing Information</a></li>
-                      <li><a href="VendorBugs.html">Bugs Reported</a></li>
-                      <li><a href="VendorHome.html">My Account</a></li>
+                      <li><a href="PMHome.html">Home</a></li>
+                      <li ><a href="NewProjects.html">New Projects</a></li>
+                      <li><a href="CurrentProjects.html">Current Projects</a></li>
+                      <li ><a href="NewTesters.html">New Testers</a></li>
+                      <li class="active"><a href="CurrentTesters.html">Current Testers</a></li>
+                      <li><a href="IncentiveRequests.html">Incentive Requests</a></li>
+                      <li><a href="PaymentRequests.html">Payment Requests</a></li>
                       <li><a href="login.html">Logout</a></li>
                     </ul>
 
-                 <p></br></br><h3>Welcome to your Dashboard!!</h3></p>
+                 <p></br></br><h3>New Projects</h3></p>
                  <p></br></p>
                  <table class="table">
                     <tr>
-                        <td><h5>Project Name</h5></td>
-                        <td><a href = "VendorProjects.html">iOS Wearable Testing</a></td>
+                        <td><h4>Tester ID</h4></td>
+                        <td><h4>First Name</h4></td>
+                        <td><h4>Last Name</h4></td>
+                        <td><h4>Country</h4></td>
+                        <td><h4>Qualification</h4></td>
+                        <td><h4>Expertise</h4></td>
+                        <td><h4>Industrial Experience</h4></td>
+                        <td><h4>Tier</h4></td>
+                        <td><h4>Status</h4></td>
                     </tr>
                     <tr>
-                        <td><h5>Project Status</h5></td>
-                        <td>In-Progress</td>
+                        <td>101</td>
+                        <td>Anhad</td>
+                        <td>Bhasin</td>
+                        <td>India</td>
+                        <td>MSSE</td>
+                        <td>Load Testing</td>
+                        <td> No Experience
+                        </td>
+                       
+                       
+                         <td>
+                            <a href = "">Tier 4
+                            
+                        </td>
+                        <td><form ng-controller="RegisterTesterController as studentFormCtrl"
+                                                      ng-submit = "studentFormCtrl.addVendor(firstName, lastName, email, contactNumber, country, highSchool, gpa, specialization, sop, lor)"><input type = "submit" value="EDIT"></form>
                     </tr>
                     <tr>
-                        <td><h5>Upload New Installation File</h5></td>
-                        <td><form><input type="file"></form></td>
+                        <td>110</td>
+                        <td>Akhila</td>
+                        <td>D </td>
+                        <td>US</td>
+                        <td>MSSE</td>
+                        <td>Functional Testing</td>
+                        <td> No Experience
+                        </td>
+                       
+                       
+                         <td>
+                            <a href = "">Tier 4
+                        </td>
+                        <td><form ng-controller="RegisterProjectController as studentFormCtrl"
+                                                      ng-submit = "studentFormCtrl.addCT(firstName, lastName, email, contactNumber, country, highSchool, gpa, specialization, sop, lor)"><input type = "submit" value="EDIT"></form>
                     </tr>
-                </table>
-
+                    <tr>
+                        <td>108</td>
+                        <td>Abhishek</td>
+                        <td>Andhare</td>
+                        <td>India</td>
+                        <td>MSSE</td>
+                        <td>Exploratory Testing</td>
+                        <td> 2 years at Aricent
+                        </td>
+                       
+                       
+                         <td>
+                            <a href = "">Tier 3
+                        </td>
+                        <td><form ng-controller="RegisterTesterController as studentFormCtrl"
+                                                      ng-submit = "studentFormCtrl.addCT(firstName, lastName, email, contactNumber, country, highSchool, gpa, specialization, sop, lor)"><input type = "submit" value="EDIT"></form>
+                    </tr>
+                    <tr>
+                        <td>109</td>
+                        <td>Koushik</td>
+                        <td>Sh</td>
+                        <td>India</td>
+                        <td>MSSE</td>
+                        <td>Functional Testing</td>
+                        <td> 2 years at Google.com
+                        </td>
+                       
+                       
+                         <td>
+                            <a href = "">Tier 2
+                        </td>
+                        <td><form ng-controller="RegisterTesterController as studentFormCtrl"
+                                                      ng-submit = "studentFormCtrl.addCT(firstName, lastName, email, contactNumber, country, highSchool, gpa, specialization, sop, lor)"><input type = "submit" value="EDIT"></form>
+                    </tr>
+                   
+                     </table>
                     
 
 

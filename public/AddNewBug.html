@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en" ng-app="school">
 
 <head>
@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Crowd Tester Registration Form</title>
+    <title>Bug Logger</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -71,71 +71,86 @@
 
             <div class="page-header">
                 <br/>
-                <h1>Crowd Tester Registration Form</h1>
-                
-            </div>
-        
-        
+                <h1>Bug Logger</h1>
 
-                        <form class="form-horizontal" novalidate ng-controller="CTFormController as studentFormCtrl"
-                                                      ng-submit = "studentFormCtrl.addCT(firstName, lastName, email, contactNumber, country, highSchool, gpa, specialization, sop, lor)">
+            </div>
+        <!--<p>Visit this page often for a sample of paid projects that are open and have unique requirements. Read the listings and apply to those for which you are a match. In order to qualify for paid projects, you must be a member, please join today.</p>-->
+
+        <!-- Centered Tabs -->
+                    <ul class="nav nav-tabs nav-justified">
+                      <li><a href="CrowdTesterHome.html">Home</a></li>
+                      <li class="active"><a href="AddNewBug.html">Add New Bug</a></li>
+                      <li ><a href="ExistingBugs.html">Existing Bugs</a></li>
+                      <li><a href="login.html">Logout</a></li>
+                    </ul>
+
+                 <p></br></br><h3>Add New Bug</h3></p>
+                 <p></br></p>
+
+                <form class="form-horizontal" novalidate ng-controller="BugController as vendorFormCtrl"
+                                                      ng-submit = "vendorFormCtrl.addVendor(vendorOrganization, contactPerson, email, appName, appDetails, functionalTesting, payAsYouGo, IpayAsYouGo)">
                             <div class="form-group">
-                            <label for="inputEmail3" class="col-sm-2 control-label">First Name</label>
+                            <label for="inputEmail3" class="col-sm-2 control-label">Project ID</label>
                             <div class="col-sm-10">
-                              <input type="text" required ng-model="firstName" class="form-control" id="inputFirstName" placeholder="First Name">
+
+                              <input type="text" required ng-model="vendorOrganization" class="form-control" id="inputFirstName" placeholder="Project ID">
                             </div>
                           </div>
                           <div class="form-group">
-                            <label for="inputEmail3" class="col-sm-2 control-label">Last Name</label>
+                            <label for="inputEmail3" class="col-sm-2 control-label">Tester ID</label>
                             <div class="col-sm-10">
-                              <input type="text" class="form-control" ng-model="lastName" id="inputLastName" placeholder="Last Name">
+                              <input type="text" class="form-control" ng-model="contactPerson" id="inputLastName" placeholder="Tester ID">
                             </div>
                           </div>
                           <div class="form-group">
-                            <label for="inputEmail3" class="col-sm-2 control-label">Email Address</label>
+                            <label for="inputEmail3" class="col-sm-2 control-label">Name</label>
                             <div class="col-sm-10">
-                              <input type="email" ng-model="email" class="form-control" id="inputEmail" placeholder="Email Address">
+                              <input type="email" ng-model="email" class="form-control" id="inputEmail" placeholder="Name">
+                            </div>
+                          </div>
+                         
+                           <div class="form-group">
+                            <label for="inputPassword3" class="col-sm-2 control-label">Bug Details</label>
+                            <div class="col-sm-10">
+                              <input type="text" class="form-control" id="appDetails" ng-model="country" placeholder="Bug Details">
                             </div>
                           </div>
                          
                           <div class="form-group">
-                            <label for="inputPassword3" class="col-sm-2 control-label">Country</label>
-                            <div class="col-sm-10">
-                              <input type="text" class="form-control" id="inputCountry" ng-model="country" placeholder="Country">
-                            </div>
-                          </div>
-                           <div class="form-group">
-                            <label for="inputPassword3" class="col-sm-2 control-label">Qualification</label>
-                            <div class="col-sm-10">
-                              <input type="text" class="form-control" id="inputCountry" ng-model="qulificatiion" placeholder="Qualification">
-                            </div>
-                          </div>
-                          <div class="form-group">
-                            <label for="inputPassword3" class="col-sm-2 control-label">Expertise</label>
-                            <div class="col-sm-10">
-                              <label class="checkbox-inline"><input type="checkbox" value="">Functional Testing</label>
-                              <label class="checkbox-inline"><input type="checkbox" value="">Localization Testing</label>
-                              <label class="checkbox-inline"><input type="checkbox" value="">Load Testing</label>
-                              <label class="checkbox-inline"><input type="checkbox" value="">Security Testing</label>
-                              <label class="checkbox-inline"><input type="checkbox" value="">Configuration Testing</label>
-                              <label class="checkbox-inline"><input type="checkbox" value="">Compatibility Testing</label>
-                            </div>
-                          </div>
-                          <div class="form-group">
-                            <label for="inputPassword3" class="col-sm-2 control-label">Industry Experience</label>
+                            <label for="inputPassword3" class="col-sm-2 control-label">Severity</label>
                             <div class="col-sm-10">                    
-                              <input type="text" class="form-control" id="inputCountry" ng-model="experience" placeholder="Industry Experience">
+                              <label class="radio-inline"><input type="radio" name="optradio" ng-model = "payAsYouGo">1</label>
+                              <label class="radio-inline"><input type="radio" name="optradio">2</label>
+                              <label class="radio-inline"><input type="radio" name="optradio">3</label>
+                            <label class="radio-inline"><input type="radio" name="optradio">4</label>
                             </div>
                           </div>
-                          
-                          
+                          <div class="form-group">
+                            <label for="inputPassword3" class="col-sm-2 control-label">Priority</label>
+                            <div class="col-sm-10">
+                              <label class="radio-inline"><input type="radio" name="optradio1" ng-model = "IpayAsYouGo">1</label>
+                              <label class="radio-inline"><input type="radio" name="optradio1">2</label>
+                              <label class="radio-inline"><input type="radio" name="optradio1">3</label>
+                            <label class="radio-inline"><input type="radio" name="optradio1">4</label>
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <label for="inputPassword3" class="col-sm-2 control-label">Type</label>
+                            <div class="col-sm-10">
+                                <input type="text" name="subfile" id="subfile" class = "form-control" placeholder = "Exploratory, UI, Functional testing, etc">
+                                
+                            </div>
+                          </div>
 
                           <div class="form-group">
                             <div class="col-sm-offset-2 col-sm-10">
                               <button type="submit" class="btn btn-default">Register</button>
                             </div>
                           </div>
-                        </form>
+                        </form>    
+
+
+
         </div>
  <!-- Footer -->
     <footer>

@@ -57,6 +57,121 @@
 
 
                 alert("Congratulations " + contactPerson + ". Vendor Registered Successfully. Please check your email for login details.");
+                window.open('vendorRegistration.html', '_self', false)
+
+            }
+        
+            
+        
+    }]);
+    app.controller('BugController', ['$http', function ($http) {
+        this.form = {};
+
+
+        this.addVendor = function (vendorOrganization, contactPerson, email, appName, appDetails, functionalTesting, payAsYouGo, IpayAsYouGo) {
+            //alert("Processing..");
+            vendorRegistration.push({
+                vendorOrganization: vendorOrganization,
+                    contactPerson: contactPerson,
+                    email: email,
+                    appName: appName,
+                    appDetails: appDetails,
+                    functionalTesting: functionalTesting,
+                    payAsYouGo: payAsYouGo,
+                    IpayAsYouGo: IpayAsYouGo
+                    
+            });
+
+
+
+                alert("Bug Registered Successfully");
+                window.open('AddNewBug.html', '_self', false)
+
+            }
+        
+            
+        
+    }]);
+      app.controller('RegisterTesterController', ['$http', function ($http) {
+        this.form = {};
+
+
+        this.addVendor = function (vendorOrganization, contactPerson, email, appName, appDetails, functionalTesting, payAsYouGo, IpayAsYouGo) {
+            //alert("Processing..");
+            vendorRegistration.push({
+                vendorOrganization: vendorOrganization,
+                    contactPerson: contactPerson,
+                    email: email,
+                    appName: appName,
+                    appDetails: appDetails,
+                    functionalTesting: functionalTesting,
+                    payAsYouGo: payAsYouGo,
+                    IpayAsYouGo: IpayAsYouGo
+                    
+            });
+
+
+
+                alert("Tester Registered Successfully.");
+                window.open('NewTesterss.html', '_self', false)
+
+            }
+        
+            
+        
+    }]);
+
+    app.controller('CTFormController', ['$http', function ($http) {
+        //this.form = {};
+
+
+        this.addCT = function (vendorOrganization, contactPerson, email, appName, appDetails, functionalTesting, payAsYouGo, IpayAsYouGo) {
+            //alert("Processing..");
+            vendorRegistration.push({
+                vendorOrganization: vendorOrganization,
+                    contactPerson: contactPerson,
+                    email: email,
+                    appName: appName,
+                    appDetails: appDetails,
+                    functionalTesting: functionalTesting,
+                    payAsYouGo: payAsYouGo,
+                    IpayAsYouGo: IpayAsYouGo
+                    
+            });
+
+
+
+                alert("Congratulations . Crowd Tester Registered Successfully. Please check your email for login details.");
+                window.open('CrowdTesterRegistration.html', '_self', false)
+
+            }
+        
+            
+        
+    }]);
+
+     app.controller('RegisterProjectController', ['$http', function ($http) {
+        //this.form = {};
+
+
+        this.addCT = function (vendorOrganization, contactPerson, email, appName, appDetails, functionalTesting, payAsYouGo, IpayAsYouGo) {
+            //alert("Processing..");
+            vendorRegistration.push({
+                vendorOrganization: vendorOrganization,
+                    contactPerson: contactPerson,
+                    email: email,
+                    appName: appName,
+                    appDetails: appDetails,
+                    functionalTesting: functionalTesting,
+                    payAsYouGo: payAsYouGo,
+                    IpayAsYouGo: IpayAsYouGo
+                    
+            });
+
+
+
+                alert("Project Registered Successfully");
+                window.open('NewProjectss.html', '_self', false)
 
             }
         
@@ -64,6 +179,9 @@
         
     }]);
     
+
+
+
     /**
 	 * @name :  LoginFormController
 	 * @description : This helps user login into the system
