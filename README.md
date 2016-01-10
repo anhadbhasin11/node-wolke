@@ -1,3 +1,9 @@
+
+I have modified this application for my college project.
+Thanks a lot to the todo team for procviding the framework on which i could build my basic html pages. Thanks
+-Anhad Singh Bhasin
+
+
 # Node Todo App
 
 A Node app built with MongoDB and Angular. For demonstration purposes and a tutorial.
