@@ -1,6 +1,7 @@
 
 I have modified this application for my college project.
-Thanks a lot to the todo team for procviding the framework on which i could build my basic html pages. Thanks
+Thanks a lot to the todo team for procviding the framework to build my application. Thanks!
+
 -Anhad Singh Bhasin
 
 
